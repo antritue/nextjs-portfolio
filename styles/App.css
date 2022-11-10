@@ -3,23 +3,24 @@
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
+  min-height: 100vh;
 }
 
 .light {
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
-  --clr-primary: #2978b5;
+  --clr-fg: #45453d;
+  --clr-fg-alt: #38312e;
+  --clr-primary: #1597bb;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .dark {
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
+  --clr-bg: #191d32;
+  --clr-bg-alt: #282f44;
   --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
-  --clr-primary: #90a0d9;
+  --clr-fg-alt: #b1d4e0;
+  --clr-primary: #1597bb;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -100,29 +101,14 @@ main {
 .btn--outline:hover,
 .btn--outline:focus {
   color: var(--clr-bg);
-}
-
-.btn--outline:before {
-  content: '';
-  position: absolute;
   background-color: var(--clr-primary);
-  right: 100%;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  transition: right 0.2s ease-in-out;
-}
-
-.btn--outline:hover:before,
-.btn--outline:focus:before {
-  right: 0;
+  transition: 0.2s ease-in-out;
 }
 
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-bg-alt);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px 1px;
   border: 0;
 }
 
@@ -134,8 +120,7 @@ main {
   padding: 0;
 }
 
-.btn--icon:hover,
-.btn--icon:focus {
+.btn--icon:hover {
   color: var(--clr-primary);
 }
 
