@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme';
 import About from '../components/About.js';
 import Projects from '../components/Projects.js';
+import Skills from '../components/Skills.js';
 
 export default function Home() {
   const [{ themeName }] = useContext(ThemeContext);
@@ -27,7 +28,7 @@ export default function Home() {
         <main>
           <About />
           <Projects />
-          {/* <Skills /> */}
+          <Skills />
           {/* <Contact /> */}
         </main>
 

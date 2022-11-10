@@ -6,6 +6,7 @@ import '../styles/Navbar.css';
 import '../styles/About.css';
 import '../styles/Contact.css';
 import '../styles/Footer.css';
+import '../styles/Skills.css';
 import '../styles/ProjectContainer.css';
 import '../styles/Projects.css';
 import '../styles/ScrollToTop.css';
