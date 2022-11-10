@@ -3,6 +3,7 @@ import Header from '../components/Header.js';
 
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme';
+import About from '../components/About.js';
 
 export default function Home() {
   const [{ themeName }] = useContext(ThemeContext);
@@ -23,14 +24,14 @@ export default function Home() {
       <div id='top' className={`${themeName} app`}>
         <Header />
         <main>
-          {/* <About />
-          <Projects />
-          <Skills />
-          <Contact /> */}
+          <About />
+          {/* <Projects /> */}
+          {/* <Skills /> */}
+          {/* <Contact /> */}
         </main>
 
-        {/* <ScrollToTop />
-        <Footer /> */}
+        {/* <ScrollToTop /> */}
+        {/* <Footer /> */}
       </div>
     </>
   );
