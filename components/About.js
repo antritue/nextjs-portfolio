@@ -26,6 +26,7 @@ const About = () => {
                   aria-label='github'
                   className='link link--icon'
                   target='_blank'
+                  rel='noreferrer'
                 >
                   <GitHubIcon />
                 </a>
@@ -37,6 +38,7 @@ const About = () => {
                   aria-label='linkedin'
                   className='link link--icon'
                   target='_blank'
+                  rel='noreferrer'
                 >
                   <LinkedInIcon />
                 </a>
@@ -46,7 +48,7 @@ const About = () => {
         </div>
         <div className='resume'>
           {resume && (
-            <a href={resume} target='_blank'>
+            <a href={resume} target='_blank' rel='noreferrer'>
               <span type='button' className='btn btn--outline'>
                 Resume
               </span>

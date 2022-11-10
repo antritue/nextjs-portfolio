@@ -23,6 +23,7 @@ const ProjectContainer = ({ project }) => (
         aria-label='source code'
         className='link link--icon'
         target='_blank'
+        rel='noreferrer'
       >
         <GitHubIcon />
       </a>
@@ -34,6 +35,7 @@ const ProjectContainer = ({ project }) => (
         aria-label='live preview'
         className='link link--icon'
         target='_blank'
+        rel='noreferrer'
       >
         <LaunchIcon />
       </a>
