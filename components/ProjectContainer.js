@@ -8,7 +8,7 @@ const ProjectContainer = ({ project }) => (
     <p className='project__description'>{project.description}</p>
     {project.stack && (
       <ul className='project__stack'>
-        {project.stack.map((item, index) => (
+        {project.stack.split(', ').map((item, index) => (
           <li key={index} className='project__stack-item'>
             {item}
           </li>

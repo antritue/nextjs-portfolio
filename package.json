@@ -10,9 +10,11 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "next": "^13.0.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "eslint": "8.8.0",

@@ -3,6 +3,7 @@ import Header from '../components/Header.js';
 
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme';
+
 import About from '../components/About.js';
 import Projects from '../components/Projects.js';
 import Skills from '../components/Skills.js';
@@ -10,7 +11,21 @@ import Contact from '../components/Contact.js';
 import Footer from '../components/Footer.js';
 import ScrollToTop from '../components/ScrollToTop.js';
 
-export default function Home() {
+import { GraphQLClient } from 'graphql-request';
+import { PROJECTS } from '../utils/graphqlRequest';
+
+const graphClient = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHQL_API);
+
+export async function getStaticProps() {
+  const { projects } = await graphClient.request(PROJECTS);
+  return {
+    props: {
+      projects,
+    },
+  };
+}
+
+export default function Home({ projects }) {
   const [{ themeName }] = useContext(ThemeContext);
   return (
     <>
@@ -28,7 +43,7 @@ export default function Home() {
         <Header />
         <main>
           <About />
-          <Projects />
+          <Projects projects={projects} />
           <Skills />
           <Contact />
         </main>

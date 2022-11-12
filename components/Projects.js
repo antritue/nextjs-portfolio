@@ -1,7 +1,6 @@
-import { projects } from '../portfolio';
 import ProjectContainer from './ProjectContainer';
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   if (!projects.length) return null;
 
   return (
