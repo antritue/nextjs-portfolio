@@ -12,20 +12,24 @@ import Footer from '../components/Footer.js';
 import ScrollToTop from '../components/ScrollToTop.js';
 
 import { GraphQLClient } from 'graphql-request';
-import { PROJECTS } from '../utils/graphqlRequest';
+import { PROJECTS, INFORMATION } from '../utils/graphqlRequest';
 
 const graphClient = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHQL_API);
 
 export async function getStaticProps() {
   const { projects } = await graphClient.request(PROJECTS);
+  const { information } = await graphClient.request(INFORMATION, {
+    id: process.env.NEXT_PUBLIC_INFORMATION_ID,
+  });
   return {
     props: {
+      information,
       projects,
     },
   };
 }
 
-export default function Home({ projects }) {
+export default function Home({ information, projects }) {
   const [{ themeName }] = useContext(ThemeContext);
   return (
     <>
@@ -42,7 +46,7 @@ export default function Home({ projects }) {
       <div id='top' className={`${themeName} app`}>
         <Header />
         <main>
-          <About />
+          <About information={information} />
           <Projects projects={projects} />
           <Skills />
           <Contact />

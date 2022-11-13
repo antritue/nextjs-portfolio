@@ -11,3 +11,22 @@ export const PROJECTS = gql`
     }
   }
 `;
+
+export const INFORMATION = gql`
+  query Information($id: ID) {
+    information(where: { id: $id }) {
+      name
+      description
+      role
+      email
+      skill
+      resume
+      linkedin
+      github
+      portfolio
+      metaTitle
+      metaDesc
+      metaKeywords
+    }
+  }
+`;
