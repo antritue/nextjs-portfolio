@@ -1,12 +1,10 @@
-import { contact } from '../portfolio';
-
-const Contact = () => {
-  if (!contact.email) return null;
+const Contact = ({ email }) => {
+  if (!email) return null;
 
   return (
     <section className='section contact center' id='contact'>
       <h2 className='section__title'>Contact</h2>
-      <a href={`mailto:${contact.email}`}>
+      <a href={`mailto:${email}`}>
         <span type='button' className='btn btn--outline'>
           Email me
         </span>

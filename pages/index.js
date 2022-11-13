@@ -48,12 +48,12 @@ export default function Home({ information, projects }) {
         <main>
           <About information={information} />
           <Projects projects={projects} />
-          <Skills />
-          <Contact />
+          <Skills skills={information.skills} />
+          <Contact email={information.email} />
         </main>
 
         <ScrollToTop />
-        <Footer />
+        <Footer src={information.portfolio} />
       </div>
     </>
   );

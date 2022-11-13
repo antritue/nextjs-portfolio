@@ -19,7 +19,7 @@ export const INFORMATION = gql`
       description
       role
       email
-      skill
+      skills
       resume
       linkedin
       github

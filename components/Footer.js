@@ -1,7 +1,7 @@
-const Footer = () => (
+const Footer = ({ src }) => (
   <footer className='footer'>
     <a
-      href='https://github.com/antritue/nextjs-portfolio'
+      href={src}
       className='link footer__link'
       target='_blank'
       rel='noreferrer'
